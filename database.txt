@@ -1,0 +1,30 @@
+CREATE DATABASE MyHospitalDB;
+USE MyHospitalDB;
+GO
+
+CREATE TABLE Hospitals (
+    HospitalID INT PRIMARY KEY IDENTITY(1,1),
+    HospitalName NVARCHAR(255) NOT NULL,
+    Location NVARCHAR(255) NOT NULL,
+    EstablishedYear INT,
+    ContactNumber NVARCHAR(50),
+    Capacity INT,
+    Specialization NVARCHAR(255)
+);
+GO
+
+INSERT INTO Hospitals (HospitalName, Location, EstablishedYear, ContactNumber, Capacity, Specialization)
+VALUES
+    ('PNS Shifa Hospital', 'Defence Housing Authority, Karachi', 1982, '021-48503000', 600, 'General & Specialized Services'),
+    ('PNS Rahat Hospital', 'Karsaz Road, Karachi', 1990, '021-48505000', 400, 'Trauma & Emergency Care'),
+    ('PNS Darmaan Jah', 'Manora, Karachi', 1975, '021-48506000', 250, 'Naval Personnel & Family Care'),
+    ('PNS Hafeez Medical Center', 'Naval Colony, Karachi', 2000, '021-48507000', 300, 'Outpatient & Diagnostic Services'),
+    ('PNS Siddique Clinic', 'Saddar, Karachi', 2010, '021-48508000', 150, 'Primary Healthcare'),
+    ('Naval Dental Center', 'Defence Phase-II, Karachi', 2005, '021-48509000', 100, 'Dental & Oral Surgery'),
+    ('Naval Rehabilitation Unit', 'Clifton, Karachi', 2015, '021-48510000', 200, 'Physical Therapy & Recovery'),
+    ('Naval Mental Health Facility', 'Gizri, Karachi', 2018, '021-48511000', 120, 'Psychiatric & Mental Wellness'),
+    ('Naval Cardiac Care Center', 'Korangi Creek, Karachi', 2012, '021-48512000', 180, 'Cardiology & Heart Surgery'),
+    ('Naval Oncology Unit', 'Shahrah-e-Faisal, Karachi', 2017, '021-48513000', 220, 'Cancer Treatment & Chemotherapy');
+GO
+
+select * from Hospitals;
